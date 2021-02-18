@@ -1,0 +1,315 @@
+{
+	"reference": {
+		"id": "B73v4",
+		"name": "Zmays B73v4",
+		"fastaURL": "https://s3.msi.umn.edu/zhoup-igv-data/Zmays-B73/10.fasta",
+		"indexURL": "https://s3.msi.umn.edu/zhoup-igv-data/Zmays-B73/10.fasta.fai"
+	},
+	"locus": [
+		"<<locus>>"
+	],
+	"tracks": [
+		{
+			"type": "sequence",
+			"order": -999,
+			"noSpinner": true
+		},
+		{
+			"name": "Genes",
+			"format": "gff3",
+			"url": "https://s3.msi.umn.edu/zhoup-igv-data/Zmays-B73/10.gff.gz",
+			"indexURL": "https://s3.msi.umn.edu/zhoup-igv-data/Zmays-B73/10.gff.gz.tbi",
+			"displayMode": "EXPANDED",
+			"visibilityWindow": -1,
+			"removable": false,
+			"order": 0,
+			"noSpinner": true,
+			"filename": "10.gff.gz",
+			"sourceType": "file",
+			"type": "annotation",
+			"maxRows": 500,
+			"filterTypes": [
+				"chromosome"
+			]
+		},
+		{
+			"name": "B73 methylation",
+			"height": 50,
+			"displayMode": "SQUISHED",
+			"type": "merged",
+			"tracks": [
+				{
+					"type": "wig",
+					"format": "bigwig",
+					"url": "https://s3.msi.umn.edu/zhoup-igv-data/Zmays-B73/methylation/cg.plus.bw",
+					"height": 50,
+					"color": "orange",
+					"isMergedTrack": true
+				},
+				{
+					"type": "wig",
+					"format": "bigwig",
+					"url": "https://s3.msi.umn.edu/zhoup-igv-data/Zmays-B73/methylation/cg.minus.bw",
+					"height": 50,
+					"color": "orange",
+					"isMergedTrack": true
+				},
+				{
+					"type": "wig",
+					"format": "bigwig",
+					"url": "https://s3.msi.umn.edu/zhoup-igv-data/Zmays-B73/methylation/chg.plus.bw",
+					"height": 50,
+					"color": "green",
+					"isMergedTrack": true
+				},
+				{
+					"type": "wig",
+					"format": "bigwig",
+					"url": "https://s3.msi.umn.edu/zhoup-igv-data/Zmays-B73/methylation/chg.minus.bw",
+					"height": 50,
+					"color": "green",
+					"isMergedTrack": true
+				},
+				{
+					"type": "wig",
+					"format": "bigwig",
+					"url": "https://s3.msi.umn.edu/zhoup-igv-data/Zmays-B73/methylation/chh.plus.bw",
+					"height": 50,
+					"color": "red",
+					"isMergedTrack": true
+				},
+				{
+					"type": "wig",
+					"format": "bigwig",
+					"url": "https://s3.msi.umn.edu/zhoup-igv-data/Zmays-B73/methylation/chh.minus.bw",
+					"height": 50,
+					"color": "red",
+					"isMergedTrack": true
+				}
+			],
+			"noSpinner": true,
+			"order": 3
+		},
+		{
+			"format": "bed",
+			"name": "B73 Unmethylated Regions (UMRs)",
+			"height": 40,
+			"type": "annotation",
+			"displayMode": "SQUISHED",
+			"url": "https://s3.msi.umn.edu/zhoup-igv-data/Zmays-B73/methylation/umr_b73.bed.gz",
+			"indexURL": "https://s3.msi.umn.edu/zhoup-igv-data/Zmays-B73/methylation/umr_b73.bed.gz.tbi",
+			"color": "rgb(0,204,0)",
+			"noSpinner": true,
+			"filename": "umr_b73.bed.gz",
+			"sourceType": "file",
+			"maxRows": 500,
+			"filterTypes": [
+				"chromosome"
+			],
+			"order": 4
+		},
+		{
+			"type": "annotation",
+			"format": "bed",
+			"name": "Uni-directional TSS Clusters",
+			"height": 40,
+			"displayMode": "EXPANDED",
+			"url": "https://s3.msi.umn.edu/zhoup-igv-data/Zmays-B73/cage/ftss.bed.gz",
+			"indexURL": "https://s3.msi.umn.edu/zhoup-igv-data/Zmays-B73/cage/ftss.bed.gz.tbi",
+			"noSpinner": true,
+			"filename": "ftss.bed.gz",
+			"sourceType": "file",
+			"maxRows": 500,
+			"filterTypes": [
+				"chromosome"
+			],
+			"order": 5
+		},
+		{
+			"name": "B73_root",
+			"height": 50,
+			"displayMode": "SQUISHED",
+			"type": "merged",
+			"tracks": [
+				{
+					"type": "wig",
+					"format": "bigwig",
+					"url": "https://s3.msi.umn.edu/zhoup-igv-data/Zmays-B73/cage/merged_bw/B73_root.plus.bw",
+					"color": "red",
+					"isMergedTrack": true
+				},
+				{
+					"type": "wig",
+					"format": "bigwig",
+					"url": "https://s3.msi.umn.edu/zhoup-igv-data/Zmays-B73/cage/merged_bw/B73_root.minus.bw",
+					"color": "green",
+					"isMergedTrack": true
+				}
+			],
+			"noSpinner": true,
+			"order": 6
+		},
+		{
+			"name": "B73_shoot",
+			"height": 50,
+			"displayMode": "SQUISHED",
+			"type": "merged",
+			"tracks": [
+				{
+					"type": "wig",
+					"format": "bigwig",
+					"url": "https://s3.msi.umn.edu/zhoup-igv-data/Zmays-B73/cage/merged_bw/B73_shoot.plus.bw",
+					"color": "red",
+					"isMergedTrack": true
+				},
+				{
+					"type": "wig",
+					"format": "bigwig",
+					"url": "https://s3.msi.umn.edu/zhoup-igv-data/Zmays-B73/cage/merged_bw/B73_shoot.minus.bw",
+					"color": "green",
+					"isMergedTrack": true
+				}
+			],
+			"noSpinner": true,
+			"order": 7
+		},
+		{
+			"name": "A632_root",
+			"height": 50,
+			"displayMode": "SQUISHED",
+			"type": "merged",
+			"tracks": [
+				{
+					"type": "wig",
+					"format": "bigwig",
+					"url": "https://s3.msi.umn.edu/zhoup-igv-data/Zmays-B73/cage/merged_bw/A632_root.plus.bw",
+					"color": "red",
+					"isMergedTrack": true
+				},
+				{
+					"type": "wig",
+					"format": "bigwig",
+					"url": "https://s3.msi.umn.edu/zhoup-igv-data/Zmays-B73/cage/merged_bw/A632_root.minus.bw",
+					"color": "green",
+					"isMergedTrack": true
+				}
+			],
+			"noSpinner": true,
+			"order": 8
+		},
+		{
+			"name": "A632_shoot",
+			"height": 50,
+			"displayMode": "SQUISHED",
+			"type": "merged",
+			"tracks": [
+				{
+					"type": "wig",
+					"format": "bigwig",
+					"url": "https://s3.msi.umn.edu/zhoup-igv-data/Zmays-B73/cage/merged_bw/A632_shoot.plus.bw",
+					"color": "red",
+					"isMergedTrack": true
+				},
+				{
+					"type": "wig",
+					"format": "bigwig",
+					"url": "https://s3.msi.umn.edu/zhoup-igv-data/Zmays-B73/cage/merged_bw/A632_shoot.minus.bw",
+					"color": "green",
+					"isMergedTrack": true
+				}
+			],
+			"noSpinner": true,
+			"order": 9
+		},
+		{
+			"name": "B73xA632_root",
+			"height": 50,
+			"displayMode": "SQUISHED",
+			"type": "merged",
+			"tracks": [
+				{
+					"type": "wig",
+					"format": "bigwig",
+					"url": "https://s3.msi.umn.edu/zhoup-igv-data/Zmays-B73/cage/merged_bw/B73xA632_root.plus.bw",
+					"color": "red",
+					"isMergedTrack": true
+				},
+				{
+					"type": "wig",
+					"format": "bigwig",
+					"url": "https://s3.msi.umn.edu/zhoup-igv-data/Zmays-B73/cage/merged_bw/B73xA632_root.minus.bw",
+					"color": "green",
+					"isMergedTrack": true
+				}
+			],
+			"noSpinner": true,
+			"order": 10
+		},
+		{
+			"name": "B73xA632_shoot",
+			"height": 50,
+			"displayMode": "SQUISHED",
+			"type": "merged",
+			"tracks": [
+				{
+					"type": "wig",
+					"format": "bigwig",
+					"url": "https://s3.msi.umn.edu/zhoup-igv-data/Zmays-B73/cage/merged_bw/B73xA632_shoot.plus.bw",
+					"color": "red",
+					"isMergedTrack": true
+				},
+				{
+					"type": "wig",
+					"format": "bigwig",
+					"url": "https://s3.msi.umn.edu/zhoup-igv-data/Zmays-B73/cage/merged_bw/B73xA632_shoot.minus.bw",
+					"color": "green",
+					"isMergedTrack": true
+				}
+			],
+			"noSpinner": true,
+			"order": 11
+		},
+		{
+			"type": "alignment",
+			"format": "bam",
+			"name": "B73xA632 shoot 1",
+			"url": "https://s3.msi.umn.edu/zhoup-igv-data/Zmays-B73/cage/bam/s71.bam",
+			"indexURL": "https://s3.msi.umn.edu/zhoup-igv-data/Zmays-B73/cage/bam/s71.bam.bai",
+			"noSpinner": true,
+			"filename": "s71.bam",
+			"sourceType": "file",
+			"height": 300,
+			"coverageTrackHeight": 50,
+			"alleleFreqThreshold": 0.2,
+			"order": 12
+		},
+		{
+			"type": "alignment",
+			"format": "bam",
+			"name": "B73xA632 shoot 2",
+			"url": "https://s3.msi.umn.edu/zhoup-igv-data/Zmays-B73/cage/bam/s72.bam",
+			"indexURL": "https://s3.msi.umn.edu/zhoup-igv-data/Zmays-B73/cage/bam/s72.bam.bai",
+			"noSpinner": true,
+			"filename": "s72.bam",
+			"sourceType": "file",
+			"height": 300,
+			"coverageTrackHeight": 50,
+			"alleleFreqThreshold": 0.2,
+			"order": 13
+		},
+		{
+			"type": "alignment",
+			"format": "bam",
+			"name": "B73xA632 shoot 3",
+			"url": "https://s3.msi.umn.edu/zhoup-igv-data/Zmays-B73/cage/bam/s73.bam",
+			"indexURL": "https://s3.msi.umn.edu/zhoup-igv-data/Zmays-B73/cage/bam/s73.bam.bai",
+			"noSpinner": true,
+			"filename": "s73.bam",
+			"sourceType": "file",
+			"height": 300,
+			"coverageTrackHeight": 50,
+			"alleleFreqThreshold": 0.2,
+			"order": 14
+		}
+	]
+}
