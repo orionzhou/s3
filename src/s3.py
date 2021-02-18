@@ -17,13 +17,16 @@ def s3_sync(args, down=False):
         sys.exit(1)
     elif down and not op.exists(bucket):
         mkdir(bucket)
-    dry = "--dry-run" if args.dry else ''
     cmd = "s3cmd -c %s/appconfig/s3cfg2" % os.environ['git'] if args.personal else "s3cmd"
     cmd += " sync --delete-removed --acl-public --follow-symlinks --exclude '.git/* .github/*'"
     # sh("%s %s --exclude '*.css' %s/ s3://%s/" % (cmd, dry, bucket, bucket))
     # sh("%s %s --content-type 'text/css' --exclude '*' --include '*.css' %s/ s3://%s/" % (cmd, dry, bucket, bucket))
-    bucket_str = f"s3://{bucket} {bucket}/" if down else f"{bucket}/ s3://{bucket}"
-    sh(f"{cmd} {dry} --no-mime-magic --guess-mime-type {bucket_str}")
+    bucket_str = f"s3://{bucket}/ {bucket}/" if down else f"{bucket}/ s3://{bucket}/"
+    cmd = f"{cmd} --no-mime-magic --guess-mime-type {bucket_str}"
+    if args.dry:
+      print(cmd)
+    else:
+      sh(cmd)
 
 def s3_up(args):
 	s3_sync(args, down=False)
