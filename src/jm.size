@@ -1,0 +1,18 @@
+#!/bin/bash -l
+#SBATCH -N 1 -n 1 -c 1
+#SBATCH --time=5:00:00
+#SBATCH --mem=20gb
+#SBATCH -p msismall
+#SBATCH --mail-type=FAIL
+#SBATCH --mail-user=pzhou@caas.cn
+#SBATCH -o jm.size.out
+#SBATCH -J s3.size
+
+echo ${SLURM_JOBID}
+source activate barn
+cpu=1
+
+cd $s3/src
+
+s3cmd ls s3://zhoup-barn/ | sed "s/\s*DIR\s*//g" | parallel -j1 s3cmd du > barn.sizes.txt
+cat buckets.txt | parallel -j1 s3cmd du s3://{} > bucket.sizes.txt
